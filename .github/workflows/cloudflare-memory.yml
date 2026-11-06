@@ -1,0 +1,32 @@
+name: Cloudflare memory checks
+
+on:
+  push:
+    paths:
+      - 'prototypes/cloudflare-memory/**'
+      - '.github/workflows/cloudflare-memory.yml'
+  pull_request:
+    paths:
+      - 'prototypes/cloudflare-memory/**'
+      - '.github/workflows/cloudflare-memory.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: prototypes/cloudflare-memory
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version-file: prototypes/cloudflare-memory/.node-version
+          cache: npm
+          cache-dependency-path: prototypes/cloudflare-memory/package-lock.json
+      - run: npm ci
+      - run: npm run check
+      - run: npm test
+      - run: npm run build
