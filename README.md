@@ -1,3 +1,7 @@
+## Cloudflare demo implementation
+
+This fork includes a [working TypeScript implementation](prototypes/cloudflare-memory/README.md): a memory gateway, separate personal and company stores persisted in Cloudflare Artifacts, a browser demo, and end-to-end tests. [Open the deployed demo](https://ompi-memory.roundtrip.workers.dev).
+
 
 <p align="center">
   <img src="media/ompi-logo.png" alt="Open Memory Protocol Initiative" width="640">
