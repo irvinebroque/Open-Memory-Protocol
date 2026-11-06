@@ -1,6 +1,6 @@
 ## Cloudflare demo implementation
 
-This fork includes a [working TypeScript implementation](prototypes/cloudflare-memory/README.md): a memory gateway, separate personal and company stores persisted in Cloudflare Artifacts, a browser demo, and end-to-end tests. [Open the deployed demo](https://ompi-memory.roundtrip.workers.dev).
+This fork includes a [working TypeScript implementation](prototypes/cloudflare-memory/README.md): a memory gateway, separate personal and company stores persisted in Cloudflare Artifacts, a browser demo, and end-to-end tests. [Open the deployed demo](https://ompi-memory.roundtrip.workers.dev). [Connect Codex through MCP](prototypes/cloudflare-memory/codex/README.md) with the included setup script and memory skill.
 
 
 <p align="center">
